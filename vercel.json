@@ -1,11 +1,12 @@
 {
   "rewrites": [
-    { "source": "/confirm", "destination": "/email-confirm.html" },
-    { "source": "/confirm/", "destination": "/email-confirm.html" }
+    { "source": "/confirm", "destination": "/email-confirmed.html" },
+    { "source": "/confirm/", "destination": "/email-confirmed.html" },
+    { "source": "/email-confirm.html", "destination": "/email-confirmed.html" }  // alias for old name
   ],
   "headers": [
     {
-      "source": "/email-confirm.html",
+      "source": "/email-confirmed.html",
       "headers": [
         { "key": "Cache-Control", "value": "no-store" },
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
