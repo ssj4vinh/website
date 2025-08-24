@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/confirm", "destination": "/email-confirm.html" },
+    { "source": "/confirm/", "destination": "/email-confirm.html" }
+  ],
+  "headers": [
+    {
+      "source": "/email-confirm.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
+  ]
+}
