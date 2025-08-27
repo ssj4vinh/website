@@ -1,8 +1,9 @@
 {
+  "version": 2,
   "rewrites": [
     { "source": "/confirm", "destination": "/email-confirmed.html" },
     { "source": "/confirm/", "destination": "/email-confirmed.html" },
-    { "source": "/email-confirm.html", "destination": "/email-confirmed.html" }  // alias for old name
+    { "source": "/email-confirm.html", "destination": "/email-confirmed.html" }
   ],
   "headers": [
     {
