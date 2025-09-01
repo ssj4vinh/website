@@ -6,6 +6,37 @@ a<!DOCTYPE html>
     <title>RadPal - AI-Powered Radiology Reporting</title>
     <meta name="description" content="RadPal is an AI-powered radiology reporting assistant that helps radiologists create accurate, consistent reports faster.">
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MGLL1EMJX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-7MGLL1EMJX');
+        
+        // Function to track download clicks
+        function trackDownload(buttonLocation) {
+            // Google Analytics tracking (requires GA4 setup)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download', {
+                    'event_category': 'engagement',
+                    'event_label': buttonLocation,
+                    'value': 1
+                });
+            }
+            
+            // Alternative: Send to a free analytics service (optional)
+            // You can also use services like Plausible, Simple Analytics, or CountAPI
+            
+            // Simple pixel tracking (optional - requires setup)
+            // var img = new Image();
+            // img.src = 'https://your-tracking-server.com/track?action=download&location=' + buttonLocation;
+            
+            // Console logging for debugging
+            console.log('Download tracked:', buttonLocation, new Date().toISOString());
+        }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -520,9 +551,9 @@ a<!DOCTYPE html>
             <ul class="nav-links">
                 <li><a href="#features">What</a></li>
                 <li><a href="#how-it-works">How</a></li>
-                <li><a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe">Download</a></li>
+                <li><a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe" onclick="trackDownload('nav-menu')">Download</a></li>
             </ul>
-            <a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe" class="cta-button">Download App</a>
+            <a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe" class="cta-button" onclick="trackDownload('header-button')">Download App</a>
         </nav>
     </header>
 
@@ -536,7 +567,7 @@ a<!DOCTYPE html>
                     Less time wrangling words, more time focusing on the read.
                 </p>
                 <div class="hero-buttons">
-                    <a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe" class="cta-button">Try RadPal Free</a>
+                    <a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe" class="cta-button" onclick="trackDownload('hero-section')">Try RadPal Free</a>
                     <a href="#how-it-works" class="secondary-button">See How It Works</a>
                 </div>
             </div>
@@ -615,7 +646,7 @@ a<!DOCTYPE html>
     <section class="cta-section" id="download">
         <h2>Ready to Transform Your Radiology Workflow?</h2>
         <p>Join radiologists using RadPal to create better reports, faster.</p>
-        <a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe" class="cta-button-white">Download RadPal Now</a>
+        <a href="https://github.com/ssj4vinh/radpalapp/releases/download/1.0.26/RadPal.Setup.1.0.26.exe" class="cta-button-white" onclick="trackDownload('bottom-cta')">Download RadPal Now</a>
     </section>
 
 </body>
